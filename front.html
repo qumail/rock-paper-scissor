@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+</head>
+<body>
+    <div id="ropasi">
+        <form action="/rps/result" method="POST" id="quickform" name="quickform">
+
+        <label for="rps">Player One:</label>
+        <select id="game" name="player_one">
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissor">Scissor</option>
+          </select>
+          
+
+          <label for="rps" >Player Two:</label>
+          <select id="game1" name="player_two">
+              <option value="rock">Rock</option>
+              <option value="paper">Paper</option>
+              <option value="scissor">Scissor</option>
+            </select>
+           
+
+            <label for="rps" >Player Three:</label>
+            <select id="game2" name="player_three">
+                <option value="rock">Rock</option>
+                <option value="paper">Paper</option>
+                <option value="scissor">Scissor</option>
+              </select>
+              
+
+              <label for="rps" >Player Four:</label>
+              <select id="game3" name="player_four">
+                  <option value="rock">Rock</option>
+                  <option value="paper">Paper</option>
+                  <option value="scissor">Scissor</option>
+                </select> 
+                
+                <br><br><br>
+                <input type="submit" value="Submit" id="quick"     onclick="random(),random1(),random2(),random3()">
+                </form>
+    </div>
+
+
+</body>
+</html>
+
+<script>
+    function random() {
+        console.log('0')
+        var select = document.getElementById('game');
+        var items = select.getElementsByTagName('option');
+        var index = Math.floor(Math.random() * items.length);
+
+       select.selectedIndex = index;
+    }
+
+    function random1() {
+        console.log('1')
+        var select = document.getElementById('game1');
+        var items = select.getElementsByTagName('option');
+        var index = Math.floor(Math.random() * items.length);
+
+       select.selectedIndex = index;
+    }
+
+    function random2() {
+        console.log('2')
+        var select = document.getElementById('game2');
+        var items = select.getElementsByTagName('option');
+        var index = Math.floor(Math.random() * items.length);
+
+       select.selectedIndex = index;
+    }
+
+    function random3() {
+        console.log('3')
+        var select = document.getElementById('game3');
+        var items = select.getElementsByTagName('option');
+        var index = Math.floor(Math.random() * items.length);
+
+       select.selectedIndex = index;
+    }
+
+// window.onload = function(){
+  //  var button = document.getElementById('quick');
+   // var times = 100
+    //setInterval(function(){
+      //  button.click();
+    //},5000);
+   
+//};
+    
+</script>
